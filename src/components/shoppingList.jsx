@@ -4,7 +4,7 @@ import { listRef } from '../firebase';
 import { addList } from '../actions';
 import ListItem from './ListItem';
 
-class shoppingList extends Component {
+class ShoppingList extends Component {
   componentDidMount() {
     listRef.on('value', snap => {
       let lists = [];
@@ -39,4 +39,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { setGoals })(shoppingList);
+export default connect(mapStateToProps, { addList })(ShoppingList);

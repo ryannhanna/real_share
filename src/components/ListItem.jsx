@@ -7,7 +7,7 @@ class ListItem extends Component {
     const { email } = this.props.user;
     const { title, serverKey } = this.props.list;
     listRef.child(serverKey).remove();
-    boughtItemref.push({email, title});
+    boughtItemRef.push({email, title});
   }
 
   render() {

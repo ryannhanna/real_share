@@ -9,7 +9,7 @@ import reducer from './reducers';
 import { GoogleAPI,GoogleLogin,GoogleLogout } from 'react-google-oauth';
 
 import App from './components/App';
-import SignIn from './components/LogIn';
+import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 
 
@@ -34,7 +34,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router path="/" history={browserHistory}>
       <Route path="/app" component={App} />
-      <Route path="/signin" component={SignIn} />
+      <Route path="/LogIn" component={LogIn} />
       <Route path="/signup" component={SignUp} />
     </Router>
   </Provider>, document.getElementById('root')
