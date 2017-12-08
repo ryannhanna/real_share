@@ -1,4 +1,4 @@
-import { LOGGED_IN, SET_GOALS, SET_COMPLETED } from '../constants';
+import { LOGGED_IN, ADD_LIST, SET_COMPLETED } from '../constants';
 
 export function logUser(email) {
   const action = {
@@ -8,10 +8,10 @@ export function logUser(email) {
   return action;
 }
 
-export function setGoals(goals) {
+export function addList(lists) {
   const action = {
-    type: SET_GOALS,
-    goals
+    type: ADD_LIST,
+    lists
   }
   return action;
 }

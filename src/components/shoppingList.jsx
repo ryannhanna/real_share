@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { goalRef } from '../firebase';
-import { setGoals } from '../actions';
+import { listRef } from '../firebase';
+import { addList } from '../actions';
 import GoalItem from './GoalItem';
 
-class GoalList extends Component {
+class shoppingList extends Component {
   componentDidMount() {
-    goalRef.on('value', snap => {
-      let goals = [];
-      snap.forEach(goal => {
-        const { email, title } = goal.val();
+    listRef.on('value', snap => {
+      let lists = [];
+      snap.forEach(list => {
+        const { email, title } = list.val();
         const serverKey = goal.key;
-        goals.push({ email, title, serverKey });
+        lists.push({ email, title, serverKey });
       })
-      this.props.setGoals(goals);
+      this.props.addList(lists);
     })
   }
 
@@ -33,10 +33,10 @@ class GoalList extends Component {
 }
 
 function mapStateToProps(state) {
-  const { goals } = state;
+  const { lists } = state;
   return {
-    goals
+    lists
   }
 }
 
-export default connect(mapStateToProps, { setGoals })(GoalList);
+export default connect(mapStateToProps, { setGoals })(shoppingList);

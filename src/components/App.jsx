@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import ListAdd from './ListAdd';
-import GoalList from './GoalList';
+import shoppingList from './shoppingList';
 import CompleteGoalList from './CompleteGoalList';
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
         <ListAdd />
         <hr />
         <h4>Shopping List</h4>
-        <GoalList />
+        <shoppingList />
         <hr />
         <h4>Complete Goals</h4>
         <CompleteGoalList />
