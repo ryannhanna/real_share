@@ -10,5 +10,6 @@ const config =  {
   messagingSenderId: "49317521904"
 };
 
-  export const firebaseApp = firebase.initializeApp(config);
-  export cosnt listRef = firebase.database().ref('lists');
+export const firebaseApp = firebase.initializeApp(config);
+export const listRef = firebase.database().ref('lists');
+export const boughtItemref= firebase.database().ref('boughtItems');

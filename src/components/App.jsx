@@ -13,14 +13,14 @@ class App extends Component {
 
   render(){
     return(
-      <div style={{margin: '5px'}}>
+      <div style={{margin: '10px'}}>
           <h3>Lists</h3>
         <ListAdd />
         <hr />
         <h4>Shopping List</h4>
-        <shoppingList />
+        <ShoppingList />
         <hr />
-        <h4>Complete Goals</h4>
+        <h4>Item Purchased</h4>
         <CompleteGoalList />
         <hr />
         <button

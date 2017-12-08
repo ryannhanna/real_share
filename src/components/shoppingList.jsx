@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { listRef } from '../firebase';
 import { addList } from '../actions';
-import GoalItem from './GoalItem';
+import ListItem from './ListItem';
 
 class shoppingList extends Component {
   componentDidMount() {
@@ -10,7 +10,7 @@ class shoppingList extends Component {
       let lists = [];
       snap.forEach(list => {
         const { email, title } = list.val();
-        const serverKey = goal.key;
+        const serverKey = list.key;
         lists.push({ email, title, serverKey });
       })
       this.props.addList(lists);
@@ -21,9 +21,9 @@ class shoppingList extends Component {
     return (
       <div>
         {
-          this.props.goals.map((goal, index) => {
+          this.props.lists.map((list, index) => {
             return (
-              <GoalItem key={index} goal={goal} />
+              <ListItem key={index} list={list} />
             )
           })
         }
