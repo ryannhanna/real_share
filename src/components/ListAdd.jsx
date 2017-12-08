@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { goalRef } from '../firebase';
+import { listRef } from '../firebase';
 
 class ListAdd extends Component {
   constructor(props) {
@@ -10,11 +10,11 @@ class ListAdd extends Component {
     }
   }
 
-  addGoal() {
+  addtoList() {
     console.log('this', this);
     const { title } = this.state;
     const { email } = this.props.user;
-    goalRef.push({email, title});
+    listRef.push({email, title});
   }
 
   render() {
@@ -23,17 +23,17 @@ class ListAdd extends Component {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Add a goal"
+            placeholder="Add an Item for purchase?"
             className="form-control"
-            style={{marginRight: '5px'}}
+            style={{marginRight: '10px'}}
             onChange={event => this.setState({title: event.target.value})}
           />
           <button
             className="btn btn-success"
             type="button"
-            onClick={() => this.addGoal()}
+            onClick={() => this.addtoList()}
           >
-            Submit
+            Add to the list!
           </button>
         </div>
       </div>
@@ -49,4 +49,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, null)(AddGoal)
+export default connect(mapStateToProps, null)(ListAdd);

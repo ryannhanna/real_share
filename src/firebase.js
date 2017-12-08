@@ -11,3 +11,4 @@ const config =  {
 };
 
   export const firebaseApp = firebase.initializeApp(config);
+  export cosnt listRef = firebase.database().ref('lists');

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { firebaseApp } from '../firebase';
 
-class LogIn extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,10 +14,10 @@ class LogIn extends Component {
     }
   }
 
-  logIn() {
+  signUp() {
     console.log('this.state', this.state);
     const { email, password } = this.state;
-    firebaseApp.auth().signInWithEmailAndPassword(email, password)
+    firebaseApp.auth().createUserWithEmailAndPassword(email, password)
       .catch(error => {
         this.setState({error})
       })
@@ -25,36 +25,36 @@ class LogIn extends Component {
 
   render() {
     return (
-      <div className="form-inline" style={{margin: '5%'}}>
-        <h2>Log in</h2>
+      <div className="form-inline" style={{margin: '10%'}}>
+        <h2>Sign Up</h2>
         <div className="form-group">
           <input
             className="form-control"
             type="text"
-            style={{marginRight: '5px'}}
+            style={{marginRight: '10px'}}
             placeholder="email"
             onChange={event => this.setState({email: event.target.value})}
           />
-          <input
+          <inputgg
             className="form-control"
             type="password"
-            style={{marginRight: '5px'}}
+            style={{marginRight: '10px'}}
             placeholder="password"
             onChange={event => this.setState({password: event.target.value})}
           />
           <button
             className="btn btn-primary"
             type="button"
-            onClick={() => this.logIn()}
+            onClick={() => this.signUp()}
           >
-            Log In
+            Sign Up
           </button>
         </div>
         <div>{this.state.error.message}</div>
-        <div><Link to={'/signUp'}>Sign up instead</Link></div>
+        <div><Link to={'/Login'}>Already a user? Log in instead</Link></div>
       </div>
     )
   }
 }
 
-export default LogIn;
+export default SignUp;

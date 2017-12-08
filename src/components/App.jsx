@@ -14,10 +14,10 @@ class App extends Component {
   render(){
     return(
       <div style={{margin: '5px'}}>
-          <h3>Goal Coach</h3>
-        <AddGoal />
+          <h3>Lists</h3>
+        <ListAdd />
         <hr />
-        <h4>Goals</h4>
+        <h4>Shopping List</h4>
         <GoalList />
         <hr />
         <h4>Complete Goals</h4>
