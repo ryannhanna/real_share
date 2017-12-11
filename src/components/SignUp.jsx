@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 
 class SignUp extends Component {
@@ -35,7 +35,7 @@ class SignUp extends Component {
             placeholder="email"
             onChange={event => this.setState({email: event.target.value})}
           />
-          <inputgg
+          <input
             className="form-control"
             type="password"
             style={{marginRight: '10px'}}
@@ -48,13 +48,13 @@ class SignUp extends Component {
             onClick={() => this.signUp()}
           >
             Sign Up
-          </button>
-        </div>
-        <div>{this.state.error.message}</div>
-        <div><Link to={'/Login'}>Already a user? Log in instead</Link></div>
-      </div>
-    )
-  }
-}
+               </button>
+             </div>
+             <div>{this.state.error.message}</div>
+             <div><Link to={'/LogIn'}>Already a user? Log In instead</Link></div>
+           </div>
+         )
+       }
+     }
 
-export default SignUp;
+     export default SignUp;

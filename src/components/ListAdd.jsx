@@ -23,7 +23,7 @@ class ListAdd extends Component {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Add an Item for purchase?"
+            placeholder="Add an Item?"
             className="form-control"
             style={{marginRight: '10px'}}
             onChange={event => this.setState({title: event.target.value})}

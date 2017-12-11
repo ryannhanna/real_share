@@ -16,10 +16,10 @@ export function addList(lists) {
   return action;
 }
 
-export function setCompleted(completeGoals) {
+export function setCompleted(boughtItems) {
   const action = {
     type: SET_COMPLETED,
-    completeGoals
+    boughtItems
   }
   return action;
 }

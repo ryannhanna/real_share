@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import ListAdd from './ListAdd';
 import ShoppingList from './ShoppingList';
-// import CompleteGoalList from './CompleteGoalList';
+import BoughtItem from './BoughtItem';
 
 class App extends Component {
   signOut() {
@@ -21,7 +21,7 @@ class App extends Component {
         <ShoppingList />
         <hr />
         <h4>Item Purchased</h4>
-        {/* <CompleteGoalList /> */}
+        <BoughtItem />
         <hr />
         <button
           className="btn btn-danger"

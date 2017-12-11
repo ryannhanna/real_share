@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 
 class LogIn extends Component {
@@ -51,7 +51,7 @@ class LogIn extends Component {
           </button>
         </div>
         <div>{this.state.error.message}</div>
-        <div><Link to={'/signUp'}>Sign up instead</Link></div>
+        <div><Link to={'/SignUp'}>Sign up?</Link></div>
       </div>
     )
   }

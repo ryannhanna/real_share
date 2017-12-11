@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import user from './reducer_user';
 import lists from './reducer_lists';
-// import completeGoals from './reducer_completed_goals';
+import boughtItems from './reducer_bought_items';
 
 export default combineReducers({
   user,
   lists,
-  // completeGoals
+  boughtItems
 })
