@@ -5,6 +5,7 @@ import ListAdd from './ListAdd';
 import ShoppingList from './ShoppingList';
 import BoughtItem from './BoughtItem';
 
+
 class App extends Component {
   signOut() {
   firebaseApp.auth().signOut();

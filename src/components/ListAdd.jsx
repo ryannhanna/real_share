@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { listRef } from '../firebase';
 
+
+
+function handleSelect(selectedKey) {
+  alert(`selected ${selectedKey}`);
+}
+
+
+
 class ListAdd extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +31,7 @@ class ListAdd extends Component {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Add an Item?"
+            placeholder="Add an Item for purchase?"
             className="form-control"
             style={{marginRight: '10px'}}
             onChange={event => this.setState({title: event.target.value})}

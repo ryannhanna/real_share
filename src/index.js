@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import  Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
@@ -7,6 +8,7 @@ import { firebaseApp } from "./firebase";
 import { logUser } from './actions';
 import reducer from './reducers';
 import { GoogleAPI,GoogleLogin,GoogleLogout } from 'react-google-oauth';
+
 
 import App from './components/App';
 import LogIn from './components/LogIn';

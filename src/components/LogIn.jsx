@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
+import { Button } from 'react-bootstrap';
 
 class LogIn extends Component {
   constructor(props) {
@@ -25,13 +26,13 @@ class LogIn extends Component {
 
   render() {
     return (
-      <div className="form-inline" style={{margin: '5%'}}>
+      <div className="form-inline" style={{margin: '10%'}}>
         <h2>Log in</h2>
         <div className="form-group">
           <input
             className="form-control"
             type="text"
-            style={{marginRight: '5px'}}
+            style={{marginRight: '10px'}}
             placeholder="email"
             onChange={event => this.setState({email: event.target.value})}
           />
