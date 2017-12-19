@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import ListAdd from './ListAdd';
-import ShoppingList from './ShoppingList.jsx';
+import ShoppingList from './ShoppingList';
 import BoughtItem from './BoughtItem';
 
 
