@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 import { Button } from 'react-bootstrap';
 
+
 class LogIn extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,8 @@ class LogIn extends Component {
         this.setState({error})
       })
   }
+
+
 
   render() {
     return (
@@ -50,6 +53,7 @@ class LogIn extends Component {
           >
             Log In
           </button>
+
         </div>
         <div>{this.state.error.message}</div>
         <div><Link to={'/SignUp'}>Sign up?</Link></div>
