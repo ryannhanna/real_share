@@ -2,6 +2,9 @@
   "name": "real_share",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.11.3"
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
